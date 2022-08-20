@@ -1,5 +1,5 @@
 # X operating system (in beta)
  
- a small project fully coded in python made by me. NOT AN ACTUAL OPERAING SYSTEM
+ a small project fully coded in python made by me. NOT AN ACTUAL OPERATING SYSTEM
  
  HEAD TO RELEASES SECTION TO GET THE .zip FILE!

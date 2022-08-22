@@ -1,8 +1,8 @@
 # X operating system (in beta)
  
-- A small project fully coded in python made by me. NOT AN ACTUAL OPERATING SYSTEM
+ HUGE NOTE HERE: THE PROJECT CAN ONLY RUN ON THE WINDOWS OPERATING SYSTEM! IOS, LINUX AND ANDROID CAN'T RUN IT SO DON'T EVEN TRY IT, DON'T WASTE YOUR TIME!
  
-About: This project is a small project of me playing around with codes.
+ About: A small project fully coded in Python made by me. Not an actual operating system, but it just sounds cool so I just call it like that :3.
 
 History: The first version of this is actually not named "X operating system" like what you see now. It was named "notepad but crappy ecks dee". After 4 months of no update, I decided to get back to the project and changed the name to "X operating system".
 
@@ -15,6 +15,3 @@ HOW TO DOWNLOAD:
 (NOTE: WINDOWS SECURITY SYSTEM WILL SCAN THE .zip FILE AFTER YOU DOWNLOADED, SO YOU WILL HAVE TO WAIT AROUND 10 SECONDS FOR IT TO OPEN!)
 - Finally, scroll down to the bottom of the file then click on the .exe file then use X Operating System freely!
 
-
-Thank you,
- Xgame

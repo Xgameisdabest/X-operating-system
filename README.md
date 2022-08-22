@@ -1,6 +1,6 @@
 # X operating system (in beta)
  
- HUGE NOTE HERE: THE PROJECT CAN ONLY RUN ON THE WINDOWS OPERATING SYSTEM! IOS, LINUX AND ANDROID CAN'T RUN IT SO DON'T EVEN TRY IT, DON'T WASTE YOUR TIME!
+ HUGE NOTE HERE: THIS PROJECT CAN ONLY RUN ON THE WINDOWS OPERATING SYSTEM! IOS, LINUX AND ANDROID CAN'T RUN IT SO DON'T EVEN TRY IT, DON'T WASTE YOUR TIME!
  
  About: A small project fully coded in Python made by me. Not an actual operating system, but it just sounds cool so I just call it like that :3.
 

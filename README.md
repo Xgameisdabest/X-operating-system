@@ -1,6 +1,6 @@
 # X operating system (in beta)
  
- HUGE NOTE HERE: THIS PROJECT CAN ONLY RUN ON THE WINDOWS OPERATING SYSTEM! IOS, LINUX AND ANDROID CAN'T RUN IT SO DON'T EVEN TRY IT, DON'T WASTE YOUR TIME!
+ This project is now *may be* compatible with all os now.
  
  About: A small project fully coded in Python made by me. Not an actual operating system, but it just sounds cool so I just call it like that :3.
 
@@ -8,10 +8,15 @@ History: The first version of this is actually not named "X operating system" li
 
 - This project is INCOMPLETE, but it will be completed in the full version so I hope you enjoy playing around with the beta version :3
 
-HOW TO DOWNLOAD: 
+HOW TO DOWNLOAD (on Windows): 
 - Firstly, click on the releases section on the page, you should see it on the right
 - Secondly, download the latest version which has the "latest" tag on the right of the name
 - Thirdly, open the .zip file that you have just downloaded then click on the "X operating system" file in the zip file that you just opened
 (NOTE: WINDOWS SECURITY SYSTEM WILL SCAN THE .zip FILE AFTER YOU DOWNLOADED, SO YOU WILL HAVE TO WAIT AROUND 10 SECONDS FOR IT TO OPEN!)
 - Finally, scroll down to the bottom of the file then click on the .exe file then use X Operating System freely!
 
+HOW TO DOWNLOAD (on Linux):
+-just do the commmand: 
+-> git clone https://github.com/Xgameisdabest/X-operating-system--in-beta-.git\
+-then run the install.sh file
+-thats all

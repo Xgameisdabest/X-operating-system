@@ -16,6 +16,7 @@ HOW TO DOWNLOAD (on Windows):
 - Finally, scroll down to the bottom of the file then click on the .exe file then use X Operating System freely!
 
 HOW TO DOWNLOAD (on Linux):
+- git clone https://github.com/Xgameisdabest/X-operating-system--in-beta-.git
 - run the xos-init.sh file (oh, also right click it and choose properties and give it a permission to run as a program)
 - then ./xos-init.sh
 - thats all

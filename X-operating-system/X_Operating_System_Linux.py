@@ -3,29 +3,28 @@ from time import *
 from random import *
 import os
 from platform import *
-import subprocess
 import webbrowser
 from tqdm import tqdm
 #----------------------------------------------------------------
 
 #variables
-update_ver = "1.2.1 BETA"
+update_ver = "1.2.5 BETA"
 
 # opening stuff
 def loadingscreen():
     for i in tqdm(range(100),desc="READING_MACHINE_ARCHITECTURE",ascii=False,dynamic_ncols=True):
-        sleep(0.1)
+        sleep(0.01)
     for i in tqdm(range(100),desc="LOADING_OPERATING_SYSTEM",ascii=False,dynamic_ncols=True):
         sleep(0.01)
     for i in tqdm(range(100),desc="LOADING_DATA",ascii=False,dynamic_ncols=True):
-        sleep(0.1)
+        sleep(0.01)
     for i in tqdm(range(100),desc="CHECKING_OS_FILE_DATA",ascii=False,dynamic_ncols=True):
-        sleep(0.1)
+        sleep(0.01)
     os.system('clear')
     for i in tqdm(range(100),desc="Xos-boot.service",ascii=False,dynamic_ncols=True):
-        sleep(0.2)
+        sleep(0.02)
     for i in tqdm(range(100),desc="Final_Check",ascii=False,dynamic_ncols=True):
-        sleep(0.15)
+        sleep(0.05)
 def opening():
     os.system('clear')
     loadingscreen()
@@ -36,7 +35,7 @@ def opening():
     sleep(2)
     print('Type /help to show how to use the operating system!')
     print('Type /info to show more info about the operating system itself!')
-    os.system('pause')
+    input("press ENTER to continue")
     os.system('clear')
 # helping commands
 def helpfunc():
@@ -56,7 +55,7 @@ def helpfunc():
 def funccmds():
     if inp == '/cmds'.lower():
      print('-----------------------------------------------------------')
-     print('IN APP COMMANDS:')
+     print('COMMANDS:')
      print('/exit to shutdown the operating system')
      print('/clear to clear the mess')
      print('/getgame to play game')
@@ -64,16 +63,20 @@ def funccmds():
      print('/time to see what time is it')
      print('/saver to activate screen saver')
      print('/devinfo to view your current device information')
+     print('/history to see your last commands')
+     print('/prompt to customize your prompt')
+     print('/update to update the thing')
      print('')
      print('OPENING WINDOW APPS COMMANDS:')
      print('/chrome to open Google Chrome')
      print('/youtube to open Youtube')
-     print('/gglphotos to open Google Photos')
      print('/explorer to open file manager')
      print('/sysmonitor to open system monitor')
      print('')
      print('HOST OPERATING SYSTEM COMMAND:')
      print('/readfile to open (VIEW ONLY) a directory in the X Operating System\'s folder/directory')
+     print('/install to download a github project')
+     print('/ssh to access remotely to any devices that supports ssh')
      print('-----------------------------------------------------------')
 # game
 def rps():
@@ -408,9 +411,12 @@ def funcgame():
         webbrowser.open('http://slither.io/')
 # log command
 def funcupdate():
-  if inp == '/updatelog'.lower():
-    print(f'UPDATE {update_ver}')
-    print("NOW USER CAN OPEN AND READ FILES BY USING THE \'/readfile\' COMMAND")
+    if inp == '/updatelog'.lower():
+        print(f'UPDATE {update_ver}')
+        print("NOW USER CAN OPEN AND READ FILES BY USING THE \'/readfile\' COMMAND")
+
+    if inp == '/update':
+        os.system("git clone https://github.com/Xgameisdabest/X-operating-system.git")
 # time
 def functime():
     if inp == '/time'.lower():
@@ -467,10 +473,6 @@ def funcopenapps():
         print("opening Youtube...")
         webbrowser.open('https://youtube.com')
 
-    if inp == "/gglphotos":
-        print("opening photos...")
-        webbrowser.open('https://photos.google.com')
-
     if inp == "/sysmonitor":
         print("opening task manager...")
         os.system('htop')
@@ -488,15 +490,17 @@ def osruncmds():
 # opening file
 def usrfile():
     if inp == "/readfile".lower():
-        os.system('dir')
+        print("Choose where to read the file (PATH DO NOT INCLUDE FILE): ")
+        USR_PATH = input("path> ")
+        os.system(f'ls {USR_PATH}')
         print('')
         openfile = input("FILE TO OPEN (VIEW ONLY): ")
         print("")
         try:
-            
-            f = open(openfile, "r")
-            print(f.read())
-            os.system("pause")
+            os.system("clear")
+            os.system(f"cat {USR_PATH}/{openfile}")
+            print('-----END-OF-FILE-----')
+            input("HIT 'ENTER' TO EXIT")
         
         
         except FileNotFoundError:
@@ -515,6 +519,20 @@ def install():
         if downloadpath != None:
             gitlink = input("paste your github link here: ")
             os.system(f"git clone {gitlink} {downloadpath}")
+
+#remote access via ssh
+def ssh():
+    if inp == "/ssh":
+        sship = input("ssh_host_ip> ")
+        sshname = input("ssh_host_name> ")
+        sshport = input("ssh_port> ")
+
+        if sshport == "":
+            os.system(f"ssh {sshname}@{sship}")
+
+        if sshport != "":
+            os.system(f"ssh -p {sshport} {sshname}@{sship}")
+
 # all functions
 def funcs():
 
@@ -539,17 +557,28 @@ def funcs():
     usrfile()
 
     install()
+
+    ssh()
     
     return
 #----------------------------------------------------------------
 
 # MAINFRAME / TASK PERFORMANCE
 opening()
-
+history = []
+PROMPT_CUSTOM = ""
 while True:
-    inp = input('$>_ ')
+    inp = input(f'{PROMPT_CUSTOM}>')
+    history.append(inp)
     
     funcs()
+
+    if inp == "/history":
+        for count, item in enumerate(history, 1):
+            print(f" {count}  {item}")
+
+    if inp =="/prompt":
+        PROMPT_CUSTOM = input("Input your new prompt here: ")
 
     if inp == "/exit".lower():
         break

@@ -1,4 +1,4 @@
-# X operating system (in beta)
+# X operating system (in beta) (No longer maintained 🥀)
  
  This project is now *may be* compatible with all os now.
  
